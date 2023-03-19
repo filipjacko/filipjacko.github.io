@@ -49,6 +49,12 @@ p {
   font-size: 18px;
 }
 
+form {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 footer {
   background-color: #f0f0f0;
   padding: 20px;
@@ -61,4 +67,11 @@ footer {
 
 .logo img:hover {
   transform: rotate(360deg);
+}
+
+img.p1, img.p2, img.p3, img.p4 {
+  max-width: 100%;
+}
+html {
+  scroll-behavior: smooth;
 }
