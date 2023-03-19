@@ -23,4 +23,4 @@ function shakeLogo() {
   }
 }
 
-setInterval(shakeLogo, 3000);
+setInterval(shakeLogo, 2000);
