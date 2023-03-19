@@ -1,0 +1,48 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .logo:hover {
+    transform: rotate(360deg);
+  }
+  
+  .shake {
+    animation: shake 0.2s linear;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-5px) rotate(-5deg);
+    }
+    40% {
+      transform: translateX(5px) rotate(5deg);
+    }
+    60% {
+      transform: translateX(-5px) rotate(-5deg);
+    }
+    80% {
+      transform: translateX(5px) rotate(5deg);
+    }
+    100% {
+      transform: translateX(0) rotate(0);
+    }
+  }
