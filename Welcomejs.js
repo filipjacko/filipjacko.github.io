@@ -1,28 +1,26 @@
-const logo = document.getElementById('logo');
+const logo = document.querySelector('.logo');
 
-let shakeIntervalId;
+let isCursorOverLogo = false;
 
-function startShaking() {
-  shakeIntervalId = setInterval(() => {
+logo.addEventListener('mouseover', function() {
+  isCursorOverLogo = true;
+  this.classList.add('rotate');
+  this.classList.remove('rotate');
+});
+
+logo.addEventListener('mouseout', function() {
+  isCursorOverLogo = false;
+  this.classList.remove('rotate');
+  this.classList.add('rotate');
+});
+
+function shakeLogo() {
+  if (!isCursorOverLogo) {
     logo.classList.add('shake');
     setTimeout(() => {
       logo.classList.remove('shake');
-    }, 100);
-  }, 5000);
+    }, 200);
+  }
 }
 
-function stopShaking() {
-  clearInterval(shakeIntervalId);
-}
-
-logo.addEventListener('mouseover', () => {
-  logo.style.animation = 'rotate 1s forwards';
-  stopShaking();
-});
-
-logo.addEventListener('mouseout', () => {
-  logo.style.animation = 'rotate-backwards 1s forwards';
-  startShaking();
-});
-
-startShaking();
+setInterval(shakeLogo, 3000);
