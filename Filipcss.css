@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -44,6 +45,49 @@ section {
 h2 {
   font-size: 36px;
 }
+/* Nadpisy nad obrazkami */
+h3 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Zobrazenie nadpisu pri hoveri */
+a:hover h3 {
+  opacity: 1;
+}
+
+/* Text na obrazku */
+a {
+  display: inline-block;
+  position: relative;
+}
+
+a img {
+  display: block;
+}
+
+a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+a:hover span {
+  opacity: 1;
+}
+
 
 p {
   font-size: 18px;
@@ -75,3 +119,5 @@ img.p1, img.p2, img.p3, img.p4 {
 html {
   scroll-behavior: smooth;
 }
+
+
