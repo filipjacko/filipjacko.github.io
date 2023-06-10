@@ -67,32 +67,32 @@ nav {
 
 /*logo edit */
 
-.logo img {
-  display: block;
-  justify-content: flex-end;
-  position: fixed;
-  max-width: 70px;
-  margin-top: 0.75rem;
-  margin-bottom: 1rem;
-  left: 1em;
-  transform-origin: center;
-  animation: slideIn 1s forwards;
-  transition: transform 0.3s ease-in-out;
-}
-
-.logo:hover img {
-  transform: scale(0.9);
-}
-
 .logo {
   position: fixed;
+  left: 1em;
+  top: 1em;
   animation: rotate 1s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
   z-index: 2;
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  animation: transform 0.3s ease-in-out;
+  transform-origin: center;
+  transform: rotate(0deg);
 }
+
+.logo:hover img {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+.logo img {
+  display: block;
+  max-width: 60px; /* Adjust the max-width as needed */
+  transform-origin: center;
+}
+
+
 
 /* welcome section */
 
@@ -175,6 +175,7 @@ nav {
 }
 
 .projects-header {
+  font-size: 2rem;
   max-width: 900px;
   margin: 0 auto 6rem auto;
   border-bottom: 0.2rem solid var(--main-white);
@@ -252,10 +253,12 @@ nav {
   font-size: 2rem;
   transition: transform 0.3s ease-out;
   margin: 1em;
+  color: black;
 }
 
 .contact-details:hover {
-  transform: translateY(8px);
+  transform: scale(0.9);
+  color: blue;
 }
 
 /* Footer */
