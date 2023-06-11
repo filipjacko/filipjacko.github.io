@@ -27,17 +27,8 @@ nav {
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(20px);
-  animation: slideIn 1s forwards;
+  animation: slideIn 2s forwards;
   transition: top 0.5s;
-}
-
-@keyframes slideIn {
-  0% {
-    top: -100px; /* Start position */
-  }
-  100% {
-    top: 0; /* End position */
-  }
 }
 
 .navlist {
@@ -71,6 +62,7 @@ nav {
   position: fixed;
   left: 1em;
   top: 1em;
+  padding: 0.8rem;
   animation: rotate 1s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -78,6 +70,7 @@ nav {
   animation-iteration-count: 1;
   animation-fill-mode: both;
   animation: transform 0.3s ease-in-out;
+  animation: slideIn 2s forwards;
   transform-origin: center;
   transform: rotate(0deg);
 }
@@ -92,6 +85,14 @@ nav {
   transform-origin: center;
 }
 
+@keyframes slideIn {
+  0% {
+    top: -100px; /* Start position */
+  }
+  100% {
+    top: 0; /* End position */
+  }
+}
 
 
 /* welcome section */
