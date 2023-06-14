@@ -77,11 +77,11 @@ nav {
 
 .logo:hover img {
   transform: scale(0.9);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 .logo img {
   display: block;
-  max-width: 60px; /* Adjust the max-width as needed */
+  max-width: 60px; 
   transform-origin: center;
 }
 
@@ -218,15 +218,18 @@ nav {
 .project-title {
   color: white;
   text-decoration: none;
-  position: absolute;
-  top: 50%;
+  font-size: 30px;
+  position: relative;
+  top: -45%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  z-index: 1;
 }
 
-.project-image:hover + .project-title {
+.project-image:hover ~ .project-title {
   opacity: 1;
 }
 
