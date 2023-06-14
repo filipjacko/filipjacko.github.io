@@ -172,7 +172,6 @@ nav {
 .projects {
   text-align: center;
   padding: 10rem 2rem;
-  background: var(--main-blue);
 }
 
 .projects-header {
@@ -217,7 +216,6 @@ nav {
 
 .project-title {
   color: white;
-  text-decoration: none;
   font-size: 30px;
   position: relative;
   top: -45%;
@@ -225,6 +223,8 @@ nav {
   transform: translate(-50%, -50%);
   text-align: center;
   opacity: 0;
+  text-decoration: underline;
+  font-weight: normal;
   transition: opacity 0.3s ease-in-out;
   z-index: 1;
 }
@@ -242,7 +242,7 @@ nav {
 }
 
 .project-image:hover {
-  filter: grayscale(100%) brightness(20%);
+  filter: grayscale(100%) brightness(5%);
 }
 
 .project-image::before {
